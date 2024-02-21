@@ -1,4 +1,6 @@
-* {
+<!DOCTYPE html>
+<style>
+{
 	font-family: 'Merriweather Sans', sans-serif;
 }
 html,body{
@@ -381,3 +383,4 @@ label{
 	    padding: 15px;
 	}
 }
+</style>
