@@ -1,18 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #5b9cfc;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
 </head>
-<ul>
-  <li><a href="default.asp">Home</a></li>
-  <li><a href="news.asp">News</a></li>
-  <li><a href="contact.asp">Contact</a></li>
-  <li><a href="about.asp">About</a></li>
-</ul>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<div class="header">
+  <h1>General Hospital Website</h1>
+  <p>Rural Colorado</p>
+</div>
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="#">Doctors</a>
+  <a href="#">Schedule an Appointment</a>
+  <a href="#" class="right">FEELING SYMPTOMATIC?</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>READ ME</h2>
+    <h5>How to use model survey:</h5>
+    <p>1. Click on "FEELING SYMPTOMATIC" button to the right of this screen.</p>
+    <p>2. There will be 2 preloaded scenarios within this next page that will simulate patient symptoms and the AI generated response to them</p>
+    <p>3. Click on CASE 1 and view the user input symptoms and the AI responce</p>
+    <p>4. Click on CASE 2 and view the user input symptoms and the AI responce</p>
+  </div>
+ 
+ <div class="main">
+    <h2>Primary Care</h2>
+    <h5>Description:</h5>
+    <p>Even if you aren't feeling unwell, you should schedule frequent health visits with your primary care doctor. Routine health maintenance is critical for preventing and diagnosing major diseases and chronic ailments that may not have obvious signs at first. In other words, your primary care physician should be your initial point of contact for routine check-ups and exams.</p>
+    <p>Aside from that, you may talk to your primary care physician about non-emergency medical matters including reproductive health, diet, sleeping problems, stress management, mental health concerns, and minor illnesses and accidents. Your primary care physician is intimately familiar with your medical history and the drugs you use. As a result, they are best positioned to provide you with the finest long-term health solution possible.</p>
+    <br>
+    <h2>Urgent Care</h2>
+    <h5>Description:</h5>
+    <p>Urgent medical conditions are ones that, while not life-threatening, demand immediate care. So, for those wondering, "Can I use urgent care as primary care if my regular physician is on vacation or has a full schedule?" the answer is yes. However, keep in mind that none of the medical staff you encounter will have as much understanding of your medical history as your PCP, so using urgent care instead of your PCP on a regular basis is not recommended. Patients are typically required to complete a large amount of documentation to assist their regular physician in catching up.</p>
+    <p>Most patients benefit from urgent care facilities being available 24 hours a day, seven days a week and not requiring an appointment. So, for a rapid diagnosis and pain management, they provide a handy alternative to waiting for a primary care visit or standing in line for hours at the emergency department. Can you receive a referral from urgent care? Yes, a healthcare expert at an urgent care facility can provide you a specialist referral if necessary.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Contact Us</h2>
+  <p class="center">123-456-7890</p>
+</div>
 
 </body>
 </html>
