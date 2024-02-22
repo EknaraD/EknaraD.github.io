@@ -106,8 +106,8 @@ body {
 
 <body>
 <div class="header">
-  <h1>Case 2</h1>
-  <p>This is the Case 2 Scenario</p>
+  <h1>Case 1</h1>
+  <p>This is the Case 1 Scenario</p>
 </div>
 
 <div class="navbar">
@@ -115,27 +115,58 @@ body {
 </div>
 
 <div class="main"> 
-  <h2>Case 2</h2>
+  <h2>Case 1</h2>
   
   <form action="/action_page.php">
     <label for="fname">Name:</label><br>
-    <input type="text" id="fname" name="fname"><br><br>
+    <input type="text" id="fname" name="fname" value="John Doe"><br><br>
     <label for="lname">Phone Number:</label><br>
-    <input type="text" id="lname" name="lname"><br><br>
+    <input type="text" id="lname" name="lname" value="098-765-4321"><br><br>
     <label for="image">Upload Images (if applicable):</label><br>
-    <input type="button" value="Upload Images"><br><br>
+    <button onclick="myFunction()">Click to Reveal Image (TW)</button><br><br>
+    <div id="myDIV">
+      <img src="https://www.shutterstock.com/image-photo/arm-wound-knife-600nw-579569335.jpg">
+    </div>
     <label for="symptoms">Describe Your Symptoms:</label><br>
-    <input type="text" id="symptoms" name="symptoms" size=210><br><br>
+    <input type="text" id="symptoms" name="symptoms" size=210 value="warm skin around the wound, chills, and red streaks around wound"><br><br>
     <label for="background">Provide Background Information:</label><br>
-    <input type="text" id="background" name="background" size=210><br><br>
-    <input type="submit" value="Submit">
+    <input type="text" id="background" name="background" size=210 value="cut happened 2 days ago, increasing in redness since, did not wash immediately"><br><br>
   </form> 
+</div>
+
+<div class="main">
+    <h2>AI Generated Responce</h2>
+    <h5>Analysis:</h5>
+    <p>The wound is a jagged tear, roughly an inch long, etching a crimson line across the subject's forearm. Its edges are clean, devoid of redness that often indicates infection. The cut seemingly is repairing itself, and evidence of the body's natural clotting mechanisms is present. There is an absence of heat or throbbing pain, indicating that inflammation hasn't taken hold.</p>
+    <br>
+    <h5>Next Steps:</h5>
+    <p>Step 1: Change the wound dressing at least once a day. Replace it immediately if it gets damp or dirty.</p>
+    <p>Step 2: Gently wash the wound each day.</p>
+    <p>Step 3: Allow the skin to air-dry.</p>
+    <p>Step 4: Apply an antiseptic ointment to the wound.</p>
+    <p>Step 5: Protect the injury with gauze or another suitable dressing.</p>
+    <br>
+    <h5>Extra Tips:</h5>
+    <p>Tip 1: Avoid using hydrogen peroxide or iodine on the wound as these may cause skin irritation in some people. Stop using other antiseptic ointments if they cause skin irritation.</p>
+    <p>Tip 2: Do not pick at the skin or the scab, as this can lead to scarring, slow healing, and increase the risk of infection.</p>
+    <p>Tip 3: See a doctor if the wound does not show improvement within 1–2 days.</p>
+  </div>
 </div>
 
 <div class="footer">
   <h2>Contact Us</h2>
   <p class="center">123-456-7890</p>
 </div>
-  
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
