@@ -123,12 +123,14 @@ body {
     <label for="lname">Phone Number:</label><br>
     <input type="text" id="lname" name="lname" value="098-765-4321"><br><br>
     <label for="image">Upload Images (if applicable):</label><br>
-<!--     <input type="button" value="Upload Images"><br><br> -->
+    <button onclick="myFunction()">Click to Reveal Image (TW)</button>
+    <div id="myDIV">
+      <img src="https://www.shutterstock.com/image-photo/arm-wound-knife-600nw-579569335.jpg">
+    </div>
     <label for="symptoms">Describe Your Symptoms:</label><br>
     <input type="text" id="symptoms" name="symptoms" size=210 value="warm skin around the wound, chills, and red streaks around wound"><br><br>
     <label for="background">Provide Background Information:</label><br>
     <input type="text" id="background" name="background" size=210 value="cut happened 2 days ago, increasing in redness since, did not wash immediately"><br><br>
-    <input type="submit" value="Submit">
   </form> 
 </div>
 
@@ -136,6 +138,16 @@ body {
   <h2>Contact Us</h2>
   <p class="center">123-456-7890</p>
 </div>
-  
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
